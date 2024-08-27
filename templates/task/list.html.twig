@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>Liste des tâches</h1>
+	<a href="{{ path('task_create') }}">Créer une nouvelle tache</a>
+	<ul>
+		{% for task in tasks %}
+			<li>
+				<strong>{{ task.title }}</strong><br>
+				{{ task.description }}<br>
+				<a href="{{ path('task_edit', {id: task.id}) }}">Modifier</a>
+				|
+				<form action="{{ path('task_delete', {id: task.id}) }}" method="post" onsubmit="return confirm('Voulez-vous vraiment supprimer cette tâche ?');" class="supp">
+					<input type="hidden" name="_method" value="DELETE">
+					<button type="submit" class="btn btn-danger">Supprimer</button>
+				</form>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+ul li a {
+    text-decoration: none;
+    
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+strong{
+    margin-bottom: 5%;
+    margin-top: 2%;
+    text-transform:uppercase ;
+}
+
+.supp{
+    width: 50%;
+}
